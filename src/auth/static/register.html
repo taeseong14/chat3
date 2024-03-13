@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/register.css">
+    <title>바불섭 회원가입</title>
+</head>
+<body>
+    <div id="container">
+        <form>
+            <input type="text" id="id" placeholder="아이디">
+            <input type="password" id="pw" placeholder="비밀번호">
+            <input type="text" id="name" placeholder="이름">
+            <button>회원가입</button>
+            <span>
+                이미 계정이 있으신가요? <a href="/login">로그인</a>
+            </span>
+        </form>
+    </div>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ldr4o8mAAAAAHa-lnlbxnAZb4a2pBiCcJbASYfP"></script>
+    <script src="/common/js/fetch.js"></script>
+    <script src="./js/register.js"></script>
+</body>
+</html>

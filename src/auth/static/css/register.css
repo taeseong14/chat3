@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+body {
+    margin: 0px;
+}
+body, input {
+    font-family: 'SUITE-Regular', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+#container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 350px;
+    height: 350px;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 6px 6px 12px #bbb;
+    background: radial-gradient(#f1f1f1, #fff);
+}
+
+form > input {
+    height: 40px;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    outline: none;
+    background-color: #f0f0f0 !important;
+    box-shadow: inset 3px 3px 8px #c9c9c9, inset -3px -3px 8px white;
+    padding: 2px 12px;
+    box-sizing: border-box;
+}
+
+form > button {
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 3px 3px 8px #c9c9c9;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+form > button:is(:hover, :focus) {
+    background-color: #f0f0f0;
+    transition: background-color ease .1s;
+}
+
+form > span {
+    font-size: 12px;
+    text-align: center;
+}
