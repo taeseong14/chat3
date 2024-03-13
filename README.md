@@ -2,7 +2,7 @@
 
 <details>
 <summary>
-```앞서 말할것```
+<code>앞서 말할것</code>
 </summary>
 <p>
 우선 개떡같은 구조에 먼저 사과하는.
