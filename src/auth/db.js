@@ -1,22 +1,4 @@
 /**
- * @typedef writing
- * @property {number} id
- * @property {string} writer writer id
- * @property {string} title
- * @property {string} content
- * @property {comment[]} comments
- * @property {string[]} good ids
- * @property {string[]} bad  ids
- * @property {number} date
- * @property {boolean} deleted
- * 
- * @typedef comment
- * @property {string} writer writer id
- * @property {string} content
- * @property {number} date createdAt
- * 
- * 
- * 
  * // 바불챗
  * 
  * @typedef user
@@ -109,20 +91,6 @@ class DB {
             pub     INT DEFAULT 1
         )`);
         // this.#db.run(`ALTER TABLE User DROP emoji`);
-
-        // // 바불커뮤
-        // this.#db.run(`CREATE TABLE IF NOT EXISTS List(
-        //     id      INTEGER PRIMARY KEY,
-        //     writer  TEXT NOT NULL,
-        //     title   TEXT NOT NULL,
-        //     content TEXT NOT NULL,
-        //     comments TEXT DEFAULT '[]',
-        //     good    TEXT DEFAULT '[]',
-        //     bad     TEXT DEFAULT '[]',
-        //     date    INT  NOT NULL,
-        //     deleted BOOL DEFAULT false
-        // )`);
-
 
         // 바불챗
 
