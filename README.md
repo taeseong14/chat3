@@ -58,3 +58,6 @@ _아직 DEPCRATED 안댓다;;;_
 
 작성중, [chat/index.js](./src/chat/index.js) 등 참고;;;;;;;;;;
 
+## 프론트
+
+[/statics](./src/chat/static/) 참고
