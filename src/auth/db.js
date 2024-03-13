@@ -20,7 +20,6 @@
  * @typedef emoji
  * @property {string} id
  * @property {string} title
-//  * @property {string} title
  * 
  * @typedef room
  * @property {string} hash

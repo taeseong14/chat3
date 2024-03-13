@@ -49,6 +49,12 @@ _아직 DEPCRATED 안댓다;;;_
  - chats  TEXT DEFAULT '[]',
  - sts    TEXT DEFAULT '{}'
 
+
+### Emoji
+
+ - 아직 넣을지 말지도 고민중임
+ - 평범한 이모티콘 디비; [db.js의 jsdoc](./src/auth/db.js#L20) 참고
+
 </details>
 
 
