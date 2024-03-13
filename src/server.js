@@ -1,3 +1,5 @@
+// only got some from `chat / login`
+
 const express = require('express');
 const app = express();
 
@@ -22,3 +24,6 @@ app.io.use((socket, next) => { // cookie-parser
 });
 
 app.use('/chat', require('./chat')(app.io));
+
+
+server.listen(3000, () => console.log('listening on port 3000'));
