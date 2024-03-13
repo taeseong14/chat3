@@ -17,8 +17,9 @@ _아직 DEPCRATED 안댓다;;;_
 
 ## 디비구조
 
+<details>
 
-#### User
+### User
 
  - id      TEXT PRIMARY KEY,
  - pw      TEXT NOT NULL,
@@ -33,7 +34,8 @@ _아직 DEPCRATED 안댓다;;;_
  - pub     INT DEFAULT 1
 
 
-#### Room
+### Room
+
 
  - hash   TEXT PRIMARY KEY,
  - name   TEXT NOT NULL,
@@ -44,3 +46,11 @@ _아직 DEPCRATED 안댓다;;;_
  - date   INT NOT NULL,
  - chats  TEXT DEFAULT '[]',
  - sts    TEXT DEFAULT '{}'
+
+</details>
+
+
+## Methods
+
+[db.js](./db.js) 참고;;
+
