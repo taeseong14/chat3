@@ -14,6 +14,8 @@
 
 _아직 DEPCRATED 안댓다;;;_
 
+[TODO.md](./TODO.md)
+
 
 ## 디비구조
 
