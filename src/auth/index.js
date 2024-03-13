@@ -54,7 +54,7 @@ app.post('/register', checkBody('token', 'id', 'pw', 'name'), async (req, res) =
     if (req.token !== 'TOKEN') {
         const { data: rec } = await axios('https://www.google.com/recaptcha/api/siteverify', {
             method: 'POST',
-            data: `secret=6Ldr4o8mAAAAAEEHR2AFipUSiMWE4Vf-GtnQr6fb&response=${req.token}`
+            data: `secret=${process.env.capchasecret}&response=${req.token}`
         });
         if (!rec.success) return res.sendErr(`Recapcha failed: ${rec['error-codes']}`);
     }
