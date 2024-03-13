@@ -52,5 +52,9 @@ _아직 DEPCRATED 안댓다;;;_
 
 ## Methods
 
-[db.js](./db.js) 참고;;
+[db.js](./src/auth/db.js) 참고;;
+
+## Routes
+
+작성중, [chat/index.js](./src/chat/index.js) 등 참고;;;;;;;;;;
 

@@ -1,0 +1,90 @@
+#popups {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#popups > div {
+    width: 45vw;
+    height: 65vh;
+    background-color: white;
+    border: 1px solid #777;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 50px;
+    overflow-y: auto;
+}
+
+#openchat input {
+    outline: none;
+    margin-top: 10px;
+    height: 27px;
+    padding: 2px;
+    border-color: #ccc;
+    border-width: 0 0 2px 0;
+    border-radius: 12px;
+    background-color: #eee;
+    padding: 0 15px;
+}
+#openchat input:hover {
+    border-color: #a7a7a7;
+    transition: border-color ease .5s;
+}
+#openchat input:focus {
+    border-color: #999;
+    transition: border-color ease .5s;
+}
+
+
+
+.openchat-search {
+    height: 60px;
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.openchat-search img {
+    width: 15px;
+}
+
+.openchat-search-head {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.theme-kakao #popups input {
+    height: 40px;
+    margin-top: 20px;
+    border: 1px solid rgb(242, 242, 242);
+    border-radius: 20px;
+    padding: 2px 20px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: rgb(242, 242, 242);
+    font-size: 14px;
+    box-sizing: border-box;
+}
+.theme-kakao #popups input:focus {
+    background-color: transparent;
+    border: 1px solid rgb(192, 192, 192);
+}
+.theme-kakao #popups input:focus:empty::placeholder {
+    color: transparent;
+}

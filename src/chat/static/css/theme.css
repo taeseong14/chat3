@@ -1,0 +1,22 @@
+.theme-neumorphism #container {
+    background-color: #f6f6f6;
+}
+
+.theme-neumorphism #screen {
+    box-shadow: 6px 6px 12px #777;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+}
+
+.theme-neumorphism #sidebar {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #f6f6f6;
+    box-shadow: 3px 3px 6px #777;
+    z-index: 10;
+}
+.theme-neumorphism #chat {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #f6f6f6;
+}
