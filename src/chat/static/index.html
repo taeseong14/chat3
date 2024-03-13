@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/popups.css">
+    <link rel="stylesheet" href="./css/theme.css">
+    <title>바불챗 v3</title>
+</head>
+
+<body class="theme-kakao">
+    <script>
+        let theme = localStorage.getItem('theme');
+        const list = ['kakao', 'neumorphism'];
+        if (theme === null || !list.includes(theme)) localStorage.setItem('theme', theme = 'kakao');
+        if (theme !== 'kakao') document.body.className = `theme-${theme}`;
+    </script>
+    <div id="container">
+        <div id="screen">
+            <div id="sidebar">
+                <img id="btn-friend" src="./img/friend.png" alt="친구 탭" title="친구">
+                <img id="btn-chat" src="./img/chat.png" alt="채팅 탭" title="대화">
+                <img id="btn-more" src="./img/meatball.png" alt="설정 탭" title="설정">
+            </div>
+            <div id="mainscreen">
+                <div id="board">
+                    <div class="board-tab" id="friend-tab">
+                        <div class="board-head">
+                            <b>친구 <span>0</span></b>
+                            <div class="board-head-menu" data-menucount="2">
+                                <img src="./img/search.png" alt="친구 검색" title="친구 검색">
+                                <img src="./img/add_friend.png" alt="친구 추가" title="친구 추가" id="add-friend-btn">
+                            </div>
+                        </div>
+                        <div class="board-content" id="friend-list">
+                            <span id="friend-list-default">친구 목록을 불러오는중..</span>
+                        </div>
+                    </div>
+                    <div class="board-tab" id="chat-tab" hidden>
+                        <div class="board-head">
+                            <b>채팅 <span>0</span></b>
+                            <div class="board-head-menu" data-menucount="3">
+                                <img src="./img/search.png" alt="방 검색" title="방 검색">
+                                <img src="./img/add_room.png" alt="방 추가" title="방 추가">
+                                <img src="./img/open_chat.png" alt="오픈채팅" title="오픈채팅" id="openchat-btn">
+                            </div>
+                        </div>
+                        <div class="board-content" id="room-list">
+                            <span id="room-list-default">방 목록을 불러오는중..</span>
+                        </div>
+                    </div>
+                    <div class="board-tab" id="more-tab" hidden>
+                        <div class="board-head">
+                            <b>더보기</b>
+                            <div class="board-head-menu">
+                                <img src="" alt="">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                        <div class="board-content">
+                            <span>설정들 (구현중)</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="chat">
+                    <div id="chat-desc">
+                        <span>채팅방을 클릭해서 채팅에 참여해 보세요.</span>
+                    </div>
+
+                    <div id="chat-condition" hidden>
+                        <div id="chat-screen"></div>
+                        <!-- (^): ul -->
+                        <form id="inputs">
+                            <textarea placeholder="채팅냠냠"></textarea>
+                            <button>전송</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="popups">
+            <div id="add-friend" class="hidden">
+                <b>친구 추가</b>
+                <button class="close-btn">x</button>
+                <input type="search" placeholder="id 혹은 닉네임으로 검색">
+                <div id="add-friend-list"></div>
+            </div>
+
+            <div id="openchat" class="hidden">
+                <b>오픈채팅 찾기</b>
+                <button class="close-btn">x</button>
+                <input type="search" id="">
+                <div id="openchat-list"></div>
+            </div>
+
+            <div id="join-room" class="hidden">
+                <b>채팅방 참여하기</b>
+                <button class="close-btn">x</button>
+                <div id="join-room-name"></div>
+                <div id="join-room-desc"></div>
+                <button id="join-room-btn"></button>
+            </div>
+
+            <div id="make-room" class="hidden">
+                <b>채팅방 만들기</b>
+                <button class="close-btn">x</button>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/relativeTime.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/ko.js"></script>
+    <script>
+        window.dayjs.extend(window.dayjs_plugin_relativeTime);
+        window.dayjs.locale('ko');
+    </script>
+    <script src="/common/js/fetch.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
